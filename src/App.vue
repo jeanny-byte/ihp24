@@ -1,7 +1,12 @@
 <template>
+  <div class="title">
+    <h3>IHP24 REGISTRATION FORM</h3>
+  </div>
+
   <div class="form-container">
    
     <form @submit.prevent="submitForm" class="custom-form">
+      <img src="IHP.ico" id="legend"/><br>
       <div class="form-group">
         <label for="fullName">Person Full Name</label><br>
         <input type="text" id="fullName" v-model="formData.fullName" required />
@@ -115,7 +120,6 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the form */
 }
 
 .image-legend {
@@ -141,11 +145,12 @@ export default {
 }
 
 label {
-  
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 input[type="text"],
 input[type="email"],
+input[type="otherText"],
 select {
   width: 90%;
   padding: 10px;
@@ -180,4 +185,22 @@ select {
 .submit-button:hover {
   background: #0056b3; /* Darker blue on hover */
 }
+#legend{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin: auto;
+  border: 1px solid;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: xx-large;
+}
+
 </style>
