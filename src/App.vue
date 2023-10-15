@@ -189,11 +189,12 @@ select {
   width: 100px;
   height: 100px;
   border-radius: 10px;
-  margin: auto;
-  border: 1px solid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  margin: auto;
+  margin-top: -70px;
   display: flex;
   justify-content: baseline;
   align-items: center;
+
 }
 .title{
   display: flex;
