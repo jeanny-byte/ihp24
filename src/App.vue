@@ -38,7 +38,7 @@ export default {
   position: center;
   margin: auto;
   background-image: url('./assets/transparent-image.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent;
   width: 60%; /* Adjust the width as needed */
