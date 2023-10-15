@@ -43,7 +43,7 @@
               value="Instagram"
               v-model="formData.socialMedia"
             />
-            Instagram
+            <i class="fa fa-instagram"></i> Instagram
           </label>
           <label>
             <input
@@ -51,7 +51,7 @@
               value="Facebook"
               v-model="formData.socialMedia"
             />
-            Facebook
+            <i class="fa fa-facebook"></i> Facebook
           </label>
           <label>
             <input
@@ -59,7 +59,7 @@
               value="Twitter"
               v-model="formData.socialMedia"
             />
-            Twitter
+            <i class="fa fa-twitter"></i> Twitter
           </label>
           <label>
             <input
@@ -67,10 +67,12 @@
               value="Other"
               v-model="formData.socialMedia"
             />
-            Other
+            <i class="fa fa-question-circle"></i> Other
           </label>
         </div>
       </div>
+     
+      
       <div class="form-group" v-if="formData.socialMedia.includes('Other')">
         <label for="otherText">Please specify how you found out:</label>
         <input type="text" id="otherText" v-model="formData.otherText" />
@@ -80,6 +82,7 @@
       </div>
     </form>
   </div>
+
 </template>
 
 <script>
