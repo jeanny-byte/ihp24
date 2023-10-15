@@ -3,7 +3,9 @@
     <!-- Use an empty div with a background image -->
     <div class="background-image"></div>
 
-    
+    <!-- Your component content goes here -->
+    <!-- For example, add text or other elements -->
+  
   </div>
 </template>
 
@@ -34,15 +36,14 @@ export default {
 
 .background-image {
   position: center;
+  margin: auto;
   background-image: url('./assets/transparent-image.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 60%;
-  height: 100vh; 
-  opacity: 0.1; 
-  margin: auto;
-
-  
+  width: 60%; /* Adjust the width as needed */
+  height: 100vh; /* Adjust the height as needed */
+  opacity: 0.2; /* Adjust the opacity to control transparency */
+  /* Add other styles as necessary */
 }
 </style>
