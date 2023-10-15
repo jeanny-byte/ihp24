@@ -33,14 +33,16 @@ export default {
 }
 
 .background-image {
-  position: fixed;
+  position: center;
   background-image: url('./assets/transparent-image.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 50%; /* Adjust the width as needed */
-  height: 50vh; /* Adjust the height as needed */
-  opacity: 0.1; /* Adjust the opacity to control transparency */
-  /* Add other styles as necessary */
+  width: 60%;
+  height: 100vh; 
+  opacity: 0.1; 
+  margin: auto;
+
+  
 }
 </style>
