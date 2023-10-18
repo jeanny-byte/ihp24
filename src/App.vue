@@ -6,7 +6,7 @@
   <div class="form-container">
    
     <form @submit.prevent="submitForm" class="custom-form">
-      <img src="IHP.ico" id="legend"/><br>
+      <img src="IHP_PIC_LG.ico" id="legend"/><br>
       <div class="form-group">
         <label for="fullName">Person Full Name</label><br>
         <input type="text" id="fullName" v-model="formData.fullName" required />
@@ -145,7 +145,8 @@ export default {
 }
 
 label {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 12px;
 }
 
 input[type="text"],
@@ -186,14 +187,15 @@ select {
   background: #0056b3; /* Darker blue on hover */
 }
 #legend{
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 75px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  margin: auto;
   margin-top: -70px;
   display: flex;
   justify-content: baseline;
   align-items: center;
+  transform: matrix3d(180);
 
 }
 .title{
