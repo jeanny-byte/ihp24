@@ -1,12 +1,17 @@
 <template>
+  <div class="legend_div">
+    <img src="IHP_PIC_LG.ico" id="legend"/>
+  </div>
+
   <div class="title">
     <h3>IHP24 REGISTRATION FORM</h3>
   </div>
+  
 
   <div class="form-container">
    
     <form @submit.prevent="submitForm" class="custom-form">
-      <img src="IHP_PIC_LG.ico" id="legend"/><br>
+      
       <div class="form-group">
         <label for="fullName">Person Full Name</label><br>
         <input type="text" id="fullName" v-model="formData.fullName" required />
@@ -116,20 +121,13 @@ export default {
 
 <style scoped>
 .form-container {
+  margin-top: none;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.image-legend {
-  flex: 1;
-  padding: 20px;
-}
-
-.image-legend img {
-  max-width: 100%;
-}
 
 .custom-form {
   max-width: 400px;
@@ -155,10 +153,13 @@ input[type="otherText"],
 select {
   width: 90%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #db2f2f;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-radius: 5px;
   background: #fff;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .radio-options label {
@@ -191,7 +192,6 @@ select {
   height: 75px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  margin: auto;
-  margin-top: -70px;
   display: flex;
   justify-content: baseline;
   align-items: center;
@@ -199,11 +199,18 @@ select {
 
 }
 .title{
+  margin-top: none;
+  margin-bottom:none ;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: xx-large;
+}
+.legend_div{
+  flex: 1;
+  margin: none;
+  padding: none;
 }
 
 </style>
