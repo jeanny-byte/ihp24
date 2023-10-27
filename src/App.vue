@@ -4,7 +4,7 @@
   </div>
 
   <div class="title">
-    <h3>IHP24 REGISTRATION FORM</h3>
+    <h3 class="typing-text">IHP24 REGISTRATION FORM</h3>
   </div>
   
 
@@ -99,6 +99,8 @@
 export default {
   data() {
     return {
+      textToType: "IHP24 REGISTRATION FORM",
+      typedText: "",
       formData: {
         fullName: '',
         gender: '',
@@ -109,17 +111,59 @@ export default {
       },
     };
   },
+  mounted() {
+    this.typeText();
+  },
   methods: {
+    typeText() {
+      let index = 0;
+      const typeInterval = 100; // Adjust this to control typing speed
+
+      const typeIntervalId = setInterval(() => {
+        if (index < this.textToType.length) {
+          this.typedText += this.textToType[index];
+          index++;
+        } else {
+          clearInterval(typeIntervalId);
+        }
+      }, typeInterval);
+    },
+  },
     submitForm() {
       // Handle form submission here
       // Redirect to the congratulations Vue component
       this.$router.push({ name: 'Congratulations' });
     },
-  },
-};
+  };
+
 </script>
 
 <style scoped>
+.typing-text {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  border-right: 2px solid transparent; /* Create the typing cursor effect */
+  animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black; /* Adjust the cursor color */
+  }
+}
 .form-container {
   margin-top: none;
   display: flex;
